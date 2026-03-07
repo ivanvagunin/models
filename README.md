@@ -1,39 +1,41 @@
-# 3D Printing STL Models
+# 3D Printing Models
 
-This repository contains STL models developed for FDM/FFF 3D printing.
+This repository stores editable source files and print-ready exports for small FDM/FFF projects.
 
-## Purpose
+## Repository Structure
 
-- Store printable STL files in one place
-- Track model iterations with Git
-- Share ready-to-slice parts for common 3D printers
+- Keep each model in its own folder.
+- Store the editable source file with the model.
+- Store only useful print artifacts, preferably a print-oriented STL when orientation matters.
+- Avoid duplicate mesh exports when Git history already preserves older revisions.
 
-## Repository Contents
+Current layout:
 
-- `hairdryer_fan.stl` - replacement fan model
+- `hairdryer_fan/` - replacement hairdryer fan model and print files
 
-## How to Use
+## Workflow
 
-1. Download or clone this repository.
-2. Open the STL file in your slicer (for example: PrusaSlicer, Cura, or OrcaSlicer).
-3. Configure print settings for your printer and filament.
-4. Slice and print.
+1. Edit the model source file first.
+2. Export a print-ready STL from the source.
+3. Slice the oriented STL in your preferred slicer.
+4. Print and validate fit before making further geometry changes.
 
-## Recommended Print Setup (Starting Point)
+## Tool Usage
+
+- Use source files for dimensional changes whenever possible.
+- Treat STL files as print artifacts, not the preferred editing format.
+- Keep model-specific notes in a per-model `README.md` inside that model folder.
+
+## Recommended Print Setup
 
 - Layer height: `0.2 mm`
 - Walls/perimeters: `3`
-- Infill: `20-40%` (depending on strength needs)
-- Material: `PLA` (or a material suitable for your use case)
-- Supports: only if required by model geometry
+- Infill: `20-40%`
+- Material: `PLA` or another suitable material
+- Supports: only if required by the model geometry
 
-Adjust settings based on your printer, nozzle size, and part requirements.
-
-## Notes
-
-- STL files are final mesh exports intended for printing.
-- If source CAD files are added later, place them in a separate folder (for example: `cad/`).
+Adjust settings for your printer, filament, and nozzle size.
 
 ## License
 
-Add your preferred license in this repository (for example: MIT, CC BY, or CC BY-SA).
+Add your preferred license if you want to publish or share the models more broadly.
